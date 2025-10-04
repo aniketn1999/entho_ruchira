@@ -1,0 +1,99 @@
+export const products = [
+  {
+    id: 1,
+    name: 'Chicken Boneless Pickle',
+    rating: 5,
+    reviews: 120,
+    price: 625,
+    oldPrice: 700,
+    discount: 11,
+    badge: 'Best Seller',
+    image: '/assets/chicken.jpg',
+    description: 'Try this pure homemade authentic Andhra style chicken boneless pickle prepared in a...'
+  },
+  {
+    id: 2,
+    name: 'Chicken Bone Pickle',
+    rating: 5,
+    reviews: 110,
+    price: 550,
+    oldPrice: 600,
+    discount: 8,
+    badge: 'Sale',
+    image: '/assets/chicken-bone.jpg',
+    description: 'Try this pure homemade authentic Andhra style chicken pickle in hyderabad prepared...'
+  },
+  {
+    id: 3,
+    name: 'Mutton Boneless Pickle',
+    rating: 5,
+    reviews: 95,
+    price: 900,
+    oldPrice: 950,
+    discount: 5,
+    badge: 'Best Seller',
+    image: '/assets/product 4.jpg',
+    description: 'Try our pure homemade authentic Andhra style Best Mutton Pickle prepared with local...'
+  },
+  {
+    id: 4,
+    name: 'Prawns Pickle',
+    rating: 5,
+    reviews: 80,
+    price: 850,
+    oldPrice: 900,
+    discount: 6,
+    badge: 'Sale',
+    image: '/assets/prawn.jpg',
+    description: 'Try our pure homemade authentic Prawns pickle prepared with fresh wat...'
+  },
+  {
+    id: 5,
+    name: 'Fish (Korramenu)',
+    rating: 5,
+    reviews: 75,
+    price: 800,
+    oldPrice: 900,
+    discount: 10,
+    badge: 'Sale',
+    image: '/assets/product 2.jpg',
+    description: 'A pure homemade Andhra style fish pickle made with fresh Koramenu fish...'
+  },
+  {
+    id: 6,
+    name: 'Fish (Salmon)',
+    rating: 5,
+    reviews: 65,
+    price: 930,
+    oldPrice: 1000,
+    discount: 7,
+    badge: 'Sale',
+    image: '/assets/product 3.jpg',
+    description: 'A delicacy made with premium Salmon fish. A must-try for fish lovers...'
+  },
+  {
+    id: 7,
+    name: 'Gongura Mutton Pickle',
+    rating: 5,
+    reviews: 50,
+    price: 750,
+    oldPrice: 850,
+    discount: 10,
+    badge: 'Best Seller',
+    image: '/assets/mutton.png',
+    description: 'A perfect combo of our best-selling vegetarian pickles.'
+  },
+  {
+    id: 8,
+    name: 'Prawns (King Prawns)',
+    rating: 5,
+    reviews: 45,
+    price: 650,
+    oldPrice: 700,
+    discount: 7,
+    badge: 'Best Seller',
+    image: '/assets/product 1.jpg',
+    description: 'A unique blend of sweet and spicy flavors that will leave you wanting more.'
+  },
+];
+
