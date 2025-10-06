@@ -64,7 +64,7 @@ const Footer = () => {
 
               <li className="flex items-center justify-center md:justify-start">
                 <FiMail className="text-[#282561] mr-2 text-lg" />
-                orders@enthoruchira.com
+                info@enthoruchira.com
               </li>
 
               <li className="flex items-center justify-center md:justify-start">

@@ -9,5 +9,5 @@ export default defineConfig({
     tailwindcss(),
     react()
   ],
-  base : "/entho_ruchira"
+  // base : "/entho_ruchira"
 })
