@@ -3,18 +3,20 @@ import React, { useState } from "react";
 import { FaSearch, FaShoppingCart, FaBars, FaTimes } from "react-icons/fa";
 import { MdOutlineAccountCircle } from "react-icons/md";
 import { Link } from "react-router";
-import App from "../App";
+import App from "../../App";
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
 
     return (
-        <nav className="w-full shadow-md fixed left-0 bg-[#fdc58a] z-50">
+        <nav className="w-full shadow-xl/20 fixed left-0 bg-[#fdc58a] z-50">
             {/* Top section */}
             <div className="flex items-center justify-between px-6 py-3 relative overflow-hidden">
                 {/* Logo */}
                 <div className="text-2xl font-bold cursor-pointer">
-                    <img src="/assets/logo.png" alt="logo" className="h-10" />
+                    <Link to='/'>
+                        <img src="/assets/logo.png" alt="logo" className="h-10" />
+                    </Link>
                 </div>
 
                 {/* Animated Offer Text */}
@@ -71,8 +73,8 @@ const Navbar = () => {
             {menuOpen && (
                 <div className="bg-[#282561] md:hidden">
                     <ul className="flex flex-col items-center gap-4 text-white py-4 font-medium">
-                        <li className="cursor-pointer hover:text-[#fdc58a]">Home</li>
-                        <li className="cursor-pointer hover:text-[#fdc58a]">Products</li>
+                        <li className="cursor-pointer hover:text-[#fdc58a]"><Link to="/">Home</Link></li>
+                        <li className="cursor-pointer hover:text-[#fdc58a]"><Link to="/products">Products</Link></li>
                         <li className="cursor-pointer hover:text-[#fdc58a]">About Us</li>
                         <li className="cursor-pointer hover:text-[#fdc58a]">Health Benefits</li>
                         <li className="cursor-pointer hover:text-[#fdc58a]">Contact Us</li>

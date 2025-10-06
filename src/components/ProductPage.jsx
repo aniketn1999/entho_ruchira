@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { products } from "./Products";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
+import Navbar from "./layout/Navbar";
+import Footer from "./layout/Footer";
 
 const ProductPage = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");

@@ -1,9 +1,7 @@
 import React from 'react';
 import { FaFacebook, FaInstagram, FaYoutube, FaXTwitter } from "react-icons/fa6";
 import { FiPhone, FiMail, FiMapPin } from "react-icons/fi";
-
-
-
+import { Link } from 'react-router';
 
 
 const Footer = () => {
@@ -17,7 +15,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-[#fdc58a]  text-[#282561] py-12">
+    <footer className="bg-[#fdc58a]  text-[#282561] py-12 ">
       <div className="container mx-auto px-20 ">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
 
@@ -26,7 +24,9 @@ const Footer = () => {
             <div className="flex items-center justify-center md:justify-start mb-4 ">
               {/* <span className="bg-[#fdc58a] text-white p-2 rounded-full font-bold">ER</span> */}
               <div className="text-2xl font-bold cursor-pointer">
-                <img src="/assets/logo.png" alt="logo" className="h-10" />
+                <Link to='/'>
+                  <img src="/assets/logo.png" alt="logo" className="h-10" />
+                </Link>
               </div>
 
               <h3 className="text-xl font-bold ml-2">Entho Ruchira</h3>
@@ -42,8 +42,8 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-lg mb-4">Quick Links</h4>
             <ul className="text-sm space-y-2">
-              <li><a href="#" className="hover:text-[#282561] hover:font-bold transition-colors duration-200">Home</a></li>
-              <li><a href="#" className="hover:text-[#282561] hover:font-bold transition-colors duration-200">Products</a></li>
+              <li><Link to="/" className="hover:text-[#282561] hover:font-bold transition-colors duration-200">Home</Link></li>
+              <li><Link to="/products" className="hover:text-[#282561] hover:font-bold transition-colors duration-200">Products</Link></li>
               <li><a href="#" className="hover:text-[#282561] hover:font-bold transition-colors duration-200">About Us</a></li>
               <li><a href="#" className="hover:text-[#282561] hover:font-bold transition-colors duration-200">Health Benefits</a></li>
               <li><a href="#" className="hover:text-[#282561] hover:font-bold transition-colors duration-200">Contact</a></li>

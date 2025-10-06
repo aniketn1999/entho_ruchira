@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
 /* @keyframes scroll {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
@@ -23,6 +28,8 @@
   display: inline-block;
   animation: marquee 12s linear infinite;
 } */
+
+
 
 @keyframes marquee {
   0%   { transform: translateX(0); }
