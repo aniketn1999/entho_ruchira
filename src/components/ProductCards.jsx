@@ -12,7 +12,7 @@ const ProductCards = () => {
           {products.map(product => (
             <div key={product.id} className="relative bg-white text-gray-800 rounded-xl shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105">
               <div className="relative">
-                <img src={product.image} alt={product.name} className="w-full h-auto object-cover" />
+                <img src={product.image} alt={product.alt} className="w-full h-auto object-cover" />
                 <span className="absolute top-4 right-4 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded-full">{product.discount}% off</span>
                 <span className="absolute top-4 left-4 bg-[#282561] text-white text-xs font-bold px-2 py-1 rounded-full">{product.badge}</span>
               </div>

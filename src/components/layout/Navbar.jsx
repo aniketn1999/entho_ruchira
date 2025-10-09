@@ -9,13 +9,13 @@ const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
 
     return (
-        <nav className="w-full shadow-xl/20 fixed left-0 bg-[#fdc58a] z-50">
+        <nav className="w-full shadow-xl fixed left-0 bg-[#fdc58a] z-50">
             {/* Top section */}
             <div className="flex items-center justify-between px-6 py-3 relative overflow-hidden">
                 {/* Logo */}
                 <div className="text-2xl font-bold cursor-pointer">
                     <Link to='/'>
-                        <img src="/assets/logo.png" alt="logo" className="h-10" />
+                        <img src="/assets/logo.png" alt="Entho Ruchira" className="h-10" />
                     </Link>
                 </div>
 

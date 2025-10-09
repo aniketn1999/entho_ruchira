@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { products } from "./Products";
-import Navbar from "./layout/Navbar";
-import Footer from "./layout/Footer";
+import SEO from "./SEO";
 
 const ProductPage = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -45,7 +44,17 @@ const ProductPage = () => {
   return (
 
     <>
-      {/* <Navbar /> */}
+
+      <SEO
+        title="Shop Non-Veg Pickles"
+        description="Explore our handmade chicken, mutton, prawn, and fish pickles prepared with authentic Telangana spices."
+        keywords="buy chicken pickle, mutton pickle,fish pickle,prawn pickle  online, Telangana pickles"
+        canonical="https://enthoruchira.com/products"
+        type="product.group"
+      />
+
+
+
 
       <section className="py-15 bg-[#282561]">
         <div className="container mx-auto px-4">
@@ -139,7 +148,7 @@ const ProductPage = () => {
                     <div className="relative">
                       <img
                         src={product.image}
-                        alt={product.name}
+                        alt={product.alt}
                         className="w-full h-auto object-cover"
                       />
                       <span className="absolute top-4 right-4 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded-full">

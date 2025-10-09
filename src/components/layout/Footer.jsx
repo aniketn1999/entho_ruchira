@@ -25,7 +25,7 @@ const Footer = () => {
               {/* <span className="bg-[#fdc58a] text-white p-2 rounded-full font-bold">ER</span> */}
               <div className="text-2xl font-bold cursor-pointer">
                 <Link to='/'>
-                  <img src="/assets/logo.png" alt="logo" className="h-10" />
+                  <img src="/assets/logo.png" alt="Entho Ruchira" className="h-10" />
                 </Link>
               </div>
 

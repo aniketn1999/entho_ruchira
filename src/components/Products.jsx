@@ -9,7 +9,8 @@ export const products = [
     discount: 11,
     badge: 'Best Seller',
     image: '/assets/chicken.jpg',
-    description: 'Try this pure homemade authentic Andhra style chicken boneless pickle prepared in a...'
+    description: 'Try this pure homemade authentic Andhra style chicken boneless pickle prepared in a...',
+    alt: 'Homemade chicken pickle by Entho Ruchira'
   },
   {
     id: 2,
@@ -21,7 +22,8 @@ export const products = [
     discount: 8,
     badge: 'Sale',
     image: '/assets/chicken-bone.jpg',
-    description: 'Try this pure homemade authentic Andhra style chicken pickle in hyderabad prepared...'
+    description: 'Try this pure homemade authentic Andhra style chicken pickle in hyderabad prepared...',
+    alt: 'Homemade chicken pickle by Entho Ruchira'
   },
   {
     id: 3,
@@ -32,8 +34,9 @@ export const products = [
     oldPrice: 950,
     discount: 5,
     badge: 'Best Seller',
-    image: '/assets/product 4.jpg',
-    description: 'Try our pure homemade authentic Andhra style Best Mutton Pickle prepared with local...'
+    image: '/assets/prd1.png',
+    description: 'Try our pure homemade authentic Andhra style Best Mutton Pickle prepared with local...',
+    alt: 'Homemade mutton pickle by Entho Ruchira'
   },
   {
     id: 4,
@@ -45,7 +48,8 @@ export const products = [
     discount: 6,
     badge: 'Sale',
     image: '/assets/prawn.jpg',
-    description: 'Try our pure homemade authentic Prawns pickle prepared with fresh wat...'
+    description: 'Try our pure homemade authentic Prawns pickle prepared with fresh wat...',
+    alt: 'Homemade prawn pickle by Entho Ruchira'
   },
   {
     id: 5,
@@ -56,8 +60,9 @@ export const products = [
     oldPrice: 900,
     discount: 10,
     badge: 'Sale',
-    image: '/assets/product 2.jpg',
-    description: 'A pure homemade Andhra style fish pickle made with fresh Koramenu fish...'
+    image: '/assets/prd2.png',
+    description: 'A pure homemade Andhra style fish pickle made with fresh Koramenu fish...',
+    alt: 'Homemade fish pickle by Entho Ruchira'
   },
   {
     id: 6,
@@ -68,8 +73,9 @@ export const products = [
     oldPrice: 1000,
     discount: 7,
     badge: 'Sale',
-    image: '/assets/product 3.jpg',
-    description: 'A delicacy made with premium Salmon fish. A must-try for fish lovers...'
+    image: '/assets/prd3.png',
+    description: 'A delicacy made with premium Salmon fish. A must-try for fish lovers...',
+    alt: 'Homemade fish pickle by Entho Ruchira'
   },
   {
     id: 7,
@@ -81,7 +87,8 @@ export const products = [
     discount: 10,
     badge: 'Best Seller',
     image: '/assets/mutton.png',
-    description: 'A perfect combo of our best-selling vegetarian pickles.'
+    description: 'A perfect combo of our best-selling vegetarian pickles.',
+    alt: 'Homemade mutton pickle by Entho Ruchira'
   },
   {
     id: 8,
@@ -93,7 +100,8 @@ export const products = [
     discount: 7,
     badge: 'Best Seller',
     image: '/assets/product 1.jpg',
-    description: 'A unique blend of sweet and spicy flavors that will leave you wanting more.'
+    description: 'A unique blend of sweet and spicy flavors that will leave you wanting more.',
+    alt: 'Homemade prawn pickle by Entho Ruchira'
   },
 ];
 

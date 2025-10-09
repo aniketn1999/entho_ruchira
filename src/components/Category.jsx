@@ -12,19 +12,19 @@ const Category = () => {
   const cards = [
     {
       id: 1,
-      image: '/assets/img1.png',
+      image: '/assets/img1.jpg',
       title: 'img1',
       color: 'bg-blue-400'
     },
     {
       id: 2,
-      image: '/assets/img2.png',
+      image: '/assets/img2.jpg',
       title: 'img2',
       color: 'bg-pink-400'
     },
     {
       id: 3,
-      image: '/assets/img3.png',
+      image: '/assets/img3.jpg',
       title: 'img3',
       color: 'bg-green-400'
     }
