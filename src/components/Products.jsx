@@ -86,7 +86,7 @@ export const products = [
     oldPrice: 850,
     discount: 10,
     badge: 'Best Seller',
-    image: '/assets/mutton.png',
+    image: '/assets/prd5.png',
     description: 'A perfect combo of our best-selling vegetarian pickles.',
     alt: 'Homemade mutton pickle by Entho Ruchira'
   },
@@ -99,7 +99,7 @@ export const products = [
     oldPrice: 700,
     discount: 7,
     badge: 'Best Seller',
-    image: '/assets/product 1.jpg',
+    image: '/assets/prd4.png',
     description: 'A unique blend of sweet and spicy flavors that will leave you wanting more.',
     alt: 'Homemade prawn pickle by Entho Ruchira'
   },
