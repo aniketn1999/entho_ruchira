@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaFacebook, FaInstagram, FaYoutube, FaXTwitter } from "react-icons/fa6";
+import { FaFacebook, FaInstagram, FaYoutube, FaXTwitter, FaLinkedin } from "react-icons/fa6";
 import { FiPhone, FiMail, FiMapPin } from "react-icons/fi";
 import { Link } from 'react-router';
 
@@ -9,9 +9,10 @@ const Footer = () => {
 
   const socials = [
     { name: "Facebook", href: "#", icon: <FaFacebook /> },
-    { name: "Instagram", href: "#", icon: <FaInstagram /> },
+    { name: "LinkedIn", href: "https://www.linkedin.com/in/entho-ruchira-422b922a4/", icon: <FaLinkedin /> },
+    { name: "Instagram", href: "https://www.instagram.com/entho_ruchira/?igsh=ZWlrOG0zNnB2b2Vl#", icon: <FaInstagram /> },
     { name: "YouTube", href: "#", icon: <FaYoutube /> },
-    { name: "X", href: "#", icon: <FaXTwitter /> },
+    { name: "X", href: "https://x.com/enthoruchira?s=21", icon: <FaXTwitter /> },
   ];
 
   return (
@@ -44,10 +45,9 @@ const Footer = () => {
             <ul className="text-sm space-y-2">
               <li><Link to="/" className="hover:text-[#282561] hover:font-bold transition-colors duration-200">Home</Link></li>
               <li><Link to="/products" className="hover:text-[#282561] hover:font-bold transition-colors duration-200">Products</Link></li>
-              <li><a href="#" className="hover:text-[#282561] hover:font-bold transition-colors duration-200">About Us</a></li>
-              <li><a href="#" className="hover:text-[#282561] hover:font-bold transition-colors duration-200">Health Benefits</a></li>
+              <li><Link to="/aboutus" className="hover:text-[#282561] hover:font-bold transition-colors duration-200">About Us</Link></li>
               <li><a href="#" className="hover:text-[#282561] hover:font-bold transition-colors duration-200">Contact</a></li>
-              <li><a href="#" className="hover:text-[#282561] hover:font-bold transition-colors duration-200">FAQ</a></li>
+              <li><Link to="/faq" className="hover:text-[#282561] hover:font-bold transition-colors duration-200">FAQ</Link></li>
               <li><a href="#" className="hover:text-[#282561] hover:font-bold transition-colors duration-200">Terms & Conditions</a></li>
               <li><a href="#" className="hover:text-[#282561] hover:font-bold transition-colors duration-200">Privacy Policy</a></li>
             </ul>

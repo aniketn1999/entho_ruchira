@@ -62,10 +62,9 @@ const Navbar = () => {
                 <ul className="flex justify-center gap-8 text-white py-2 font-bold">
                     <li className="cursor-pointer hover:text-[#fdc58a]"><Link to="/">Home</Link></li>
                     <li className="cursor-pointer hover:text-[#fdc58a]"><Link to="/products">Products</Link></li>
-                    <li className="cursor-pointer hover:text-[#fdc58a]">About Us</li>
-                    <li className="cursor-pointer hover:text-[#fdc58a]">Health Benefits</li>
+                    <li className="cursor-pointer hover:text-[#fdc58a]"><Link to="/aboutus">About Us</Link></li>
                     <li className="cursor-pointer hover:text-[#fdc58a]">Contact Us</li>
-                    <li className="cursor-pointer hover:text-[#fdc58a]">FAQ</li>
+                    <li className="cursor-pointer hover:text-[#fdc58a]"><Link to="/faq">FAQ</Link></li>
                 </ul>
             </div>
 
@@ -75,10 +74,9 @@ const Navbar = () => {
                     <ul className="flex flex-col items-center gap-4 text-white py-4 font-medium">
                         <li className="cursor-pointer hover:text-[#fdc58a]"><Link to="/">Home</Link></li>
                         <li className="cursor-pointer hover:text-[#fdc58a]"><Link to="/products">Products</Link></li>
-                        <li className="cursor-pointer hover:text-[#fdc58a]">About Us</li>
-                        <li className="cursor-pointer hover:text-[#fdc58a]">Health Benefits</li>
+                        <li className="cursor-pointer hover:text-[#fdc58a]"><Link to="/aboutus">About Us</Link></li>
                         <li className="cursor-pointer hover:text-[#fdc58a]">Contact Us</li>
-                        <li className="cursor-pointer hover:text-[#fdc58a]">FAQ</li>
+                        <li className="cursor-pointer hover:text-[#fdc58a]"><Link to="/faq">FAQ</Link></li>
                     </ul>
                 </div>
             )}
