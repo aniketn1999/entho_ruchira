@@ -1,8 +1,15 @@
 import React from 'react';
 import { products } from './Products';
+import { NavLink } from 'react-router';
 
 
 const ProductCards = () => {
+
+  // const desc = products.description
+  // const description = desc.length > 80 ? desc.slice(0, 80) + '...' : desc
+  // // console.log(description);
+
+
   return (
     <section className="py-16 bg-[#282561] text-gray-100">
       <div className="container mx-auto px-4 text-center">
@@ -11,15 +18,17 @@ const ProductCards = () => {
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {products.map(product => (
             <div key={product.id} className="relative bg-white text-gray-800 rounded-xl shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105">
-              <div className="relative">
-                <img src={product.image} alt={product.alt} className="w-full h-auto object-cover" />
-                <span className="absolute top-4 right-4 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded-full">{product.discount}% off</span>
-                <span className="absolute top-4 left-4 bg-[#282561] text-white text-xs font-bold px-2 py-1 rounded-full">{product.badge}</span>
-              </div>
+              <NavLink to={`/products/${product.id}`}>
+                <div className="relative">
+                  <img src={product.image} alt={product.alt} className="w-full h-auto object-cover" />
+                  <span className="absolute top-4 right-4 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded-full">{product.discount}% off</span>
+                  <span className="absolute top-4 left-4 bg-[#282561] text-white text-xs font-bold px-2 py-1 rounded-full">{product.badge}</span>
+                </div>
+              </NavLink>
               <div className="p-4 flex flex-col justify-between">
                 <div>
                   <div className="flex items-center justify-between mb-2 text-gray-600">
-                    <span className="text-sm">{product.price / 100} GMS</span>
+                    <span className="text-sm">1000 GMS</span>
                     <div className="flex items-center">
                       {[...Array(5)].map((_, i) => (
                         <svg key={i} className={`w-4 h-4 ${i < product.rating ? 'text-[#fdc58a]' : 'text-gray-300'}`} fill="currentColor" viewBox="0 0 20 20">
@@ -30,18 +39,26 @@ const ProductCards = () => {
                     </div>
                   </div>
                   <h3 className="text-lg font-bold text-[#282561]">{product.name}</h3>
-                  <p className="text-sm text-gray-500 mt-2">{product.description}</p>
+                  <p className="text-sm text-gray-500 mt-2">
+                    {product.description.length > 80
+                      ? `${product.description.slice(0, 80)}...`
+                      : product.description
+                    }
+                  </p>
                 </div>
                 <div className="mt-4 flex items-center justify-between">
                   <div>
-                    <span className="text-lg font-bold text-[#282561]">₹{product.price}</span>
-                    <span className="text-sm text-gray-400 line-through ml-2">₹{product.oldPrice}</span>
+                    {/* <span className="text-lg font-bold text-[#282561]">₹{product.prices.price}</span> */}
+                    <span className="text-sm text-gray-400 ml-2">₹{product.oldPrice}</span>
                   </div>
-                  <button className="bg-[#fdc58a] text-[#282561] font-bold py-2 px-6 rounded-full transition-colors duration-300 hover:bg-[#ffdfb1]">
-                    BUY
-                  </button>
+                  <NavLink to={`/products/${product.id}`}>
+                    <button className="bg-[#fdc58a] text-[#282561] font-bold py-2 px-6 rounded-full transition-colors duration-300 hover:bg-[#ffdfb1] cursor-pointer">
+                      BUY
+                    </button>
+                  </NavLink>
                 </div>
               </div>
+
             </div>
           ))}
         </div>

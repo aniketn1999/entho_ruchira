@@ -185,7 +185,7 @@ const FAQ = () => {
                                     <h3 className="text-xl font-bold">{group.category}</h3>
                                 </div>
 
-                                <div className="bg-white rounded-b-2xl shadow-xl border border-t-0">
+                                  <div className="bg-white rounded-b-2xl shadow-xl border border-t-0">
                                     {group.questions.map((item, itemIndex) => {
                                         const globalIndex = `${groupIndex}-${itemIndex}`;
                                         return (

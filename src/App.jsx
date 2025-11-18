@@ -59,7 +59,7 @@ const App = () => {
       <SEO
         title="Authentic Handmade Non-Veg Pickles"
         description="Entho Ruchira offers authentic handmade non-veg pickles crafted with traditional Telangana recipes."
-        keywords="non-veg pickles, chicken pickle, mutton pickle, Telangana pickles"
+        keywords="non-veg pickles, chicken pickle, mutton pickle, Telangana pickles, entho ruchira, "
         canonical="https://enthoruchira.com"
         image="https://enthoruchira.com/assets/logo.png"
       />
