@@ -12,7 +12,7 @@ const Navbar = () => {
   const [showLoginPopup, setShowLoginPopup] = useState(false);
 
   const { currentUser, logout } = useAuth(); // ✅ Access user and logout
-  console.log("Current User:", currentUser);
+  // console.log("Current User:", currentUser);
 
 
   return (

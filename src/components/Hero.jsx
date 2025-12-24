@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 
 const Hero = () => {
     const images = [
-        '/assets/bgImg.jpg',
-        '/assets/bgimg1.jpg',
-        '/assets/bgimg2.jpg',
-        '/assets/bgimg3.jpg'
+        '/assets/backgroundImg.png',
+        '/assets/backgroundImg1.png',
+        '/assets/backgroundImg2.png',
+        '/assets/backgroundImg3.png'
     ];
 
     const [currentImageIndex, setCurrentImageIndex] = useState(0);

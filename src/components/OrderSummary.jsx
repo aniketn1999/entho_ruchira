@@ -11,7 +11,7 @@ const OrderSummary = ({ onPlaceOrder }) => {
     return sum + price * qty;
   }, 0);
 
-  const shipping = subtotal > 1000 ? 0 : 50;
+  const shipping =  50;
   const total = subtotal + shipping;
 
   return (
@@ -43,7 +43,7 @@ const OrderSummary = ({ onPlaceOrder }) => {
 
       <div className="flex justify-between text-sm">
         <span>Shipping</span>
-        <span>{shipping === 0 ? "Free" : `₹${shipping}`}</span>
+        <span>{`₹${shipping}`}</span>
       </div>
 
       <hr className="my-4" />
@@ -55,7 +55,7 @@ const OrderSummary = ({ onPlaceOrder }) => {
 
       <button
         onClick={onPlaceOrder}
-        className="mt-6 w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 rounded-lg transition"
+        className="mt-6 w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 rounded-lg transition cursor-pointer"
       >
         Place Order
       </button>

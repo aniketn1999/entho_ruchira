@@ -7,13 +7,15 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyA6f0lJKXlrFznXNaHHsPRC34_CPZHlSiI",
-  authDomain: "entho-ruchira.firebaseapp.com",
-  projectId: "entho-ruchira",
-  storageBucket: "entho-ruchira.firebasestorage.app",
-  messagingSenderId: "401251985341",
-  appId: "1:401251985341:web:fd9630edd45125323f94d4"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID
 };
+
+// console.log("API KEY:", import.meta.env.VITE_FIREBASE_API_KEY);
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);

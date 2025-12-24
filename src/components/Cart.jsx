@@ -4,6 +4,8 @@ import { FaArrowLeftLong } from "react-icons/fa6";
 import { NavLink, useNavigate } from "react-router";
 import { auth } from "./firebase";
 import LoginWithMobile from "./authentication/LoginWithMobile";
+import { FaRegTrashAlt } from "react-icons/fa";
+
 
 const Cart = () => {
   const { cartItems, setCartItems } = useCart();
@@ -13,7 +15,6 @@ const Cart = () => {
 
   const navigate = useNavigate();
 
-  // ❌ Removed shipping & free shipping logic completely
   const subtotal = cartItems.reduce(
     (acc, item) => acc + item.price * item.quantity,
     0
@@ -29,9 +30,14 @@ const Cart = () => {
     setCartItems(updatedItems);
   };
 
-  const handleRemoveItem = (id) => {
-    setCartItems(cartItems.filter((item) => item.id !== id));
+  const handleRemoveItem = (id, selectedWeight) => {
+    setCartItems(
+      cartItems.filter(
+        (item) => !(item.id === id && item.selectedWeight === selectedWeight)
+      )
+    );
   };
+
 
   const applyPromoCode = () => {
     if (promoCode === "SAVE10") {
@@ -44,6 +50,11 @@ const Cart = () => {
   };
 
   const handleProceedToBuy = () => {
+    if (cartItems.length === 0) {
+      alert("Your cart is empty. Add items before proceeding to checkout.");
+      return;
+    }
+
     if (auth.currentUser) {
       navigate("/checkout");
     } else {
@@ -115,10 +126,10 @@ const Cart = () => {
 
                   <div className="text-right">
                     <button
-                      onClick={() => handleRemoveItem(item.id)}
+                      onClick={() => handleRemoveItem(item.id, item.selectedWeight)}
                       className="text-red-500 hover:text-red-700 transition-colors mb-2"
                     >
-                      🗑
+                      <FaRegTrashAlt />
                     </button>
 
                     <p className="text-lg font-bold text-gray-800">

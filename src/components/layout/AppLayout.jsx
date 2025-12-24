@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from './Navbar'
 import Footer from './Footer'
 import { Outlet } from 'react-router'
+import FloatingWhatsApp from './Whatsapp'
 
 const AppLayout = () => {
     return (
@@ -11,6 +12,7 @@ const AppLayout = () => {
                 <Outlet />
             </main>
             <Footer />
+            <FloatingWhatsApp/>
         </>
     )
 }
