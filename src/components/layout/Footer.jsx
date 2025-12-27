@@ -1,38 +1,59 @@
-import React from 'react';
-import { FaFacebook, FaInstagram, FaYoutube, FaXTwitter, FaLinkedin } from "react-icons/fa6";
+import React from "react";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaYoutube,
+  FaXTwitter,
+  FaLinkedin,
+} from "react-icons/fa6";
 import { FiPhone, FiMail, FiMapPin } from "react-icons/fi";
-import { NavLink } from 'react-router';
-
+import { NavLink } from "react-router";
 
 const Footer = () => {
-
-
   const socials = [
     { name: "Facebook", href: "#", icon: <FaFacebook /> },
-    { name: "LinkedIn", href: "https://www.linkedin.com/in/entho-ruchira-422b922a4/", icon: <FaLinkedin /> },
-    { name: "Instagram", href: "https://www.instagram.com/entho_ruchira/?igsh=ZWlrOG0zNnB2b2Vl#", icon: <FaInstagram /> },
+    {
+      name: "LinkedIn",
+      href: "https://www.linkedin.com/in/entho-ruchira-422b922a4/",
+      icon: <FaLinkedin />,
+    },
+    {
+      name: "Instagram",
+      href: "https://www.instagram.com/enthoruchiraa?igsh=Ymx6em5lc3hhYzZz",
+      icon: <FaInstagram />,
+    },
     { name: "YouTube", href: "#", icon: <FaYoutube /> },
-    { name: "X", href: "https://x.com/enthoruchira?s=21", icon: <FaXTwitter /> },
+    {
+      name: "X",
+      href: "https://x.com/enthoruchira?s=21",
+      icon: <FaXTwitter />,
+    },
   ];
 
   return (
     <footer className="bg-[#fdc58a]  text-[#282561] py-12 ">
       <div className="container mx-auto px-20 ">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
-
           {/* Company Info Section */}
           <div>
             <div className="flex items-center justify-center md:justify-start mb-4 ">
               {/* <span className="bg-[#fdc58a] text-white p-2 rounded-full font-bold">ER</span> */}
               <div className="text-2xl font-bold cursor-pointer">
-                <NavLink to='/'>
-                  <img src="/assets/logo.png" alt="Entho Ruchira" className="h-10" />
+                <NavLink to="/">
+                  <img
+                    src="/assets/logo.png"
+                    alt="Entho Ruchira"
+                    className="h-10"
+                  />
                 </NavLink>
               </div>
 
               <h3 className="text-xl font-bold ml-2">Entho Ruchira</h3>
             </div>
-            <p className="text-sm">Authentic handcrafted Telangana pickles made with love and traditional recipes passed down through generations.</p>
+            <p className="text-sm">
+              Authentic handcrafted Telangana pickles made with love and
+              traditional recipes passed down through generations.
+            </p>
             <ul className="mt-4 text-sm space-y-2">
               <li>100% Handmade • No Preservatives</li>
               <li>Traditional Recipes • Premium Quality</li>
@@ -43,13 +64,63 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-lg mb-4">Quick Links</h4>
             <ul className="text-sm space-y-2">
-              <li><NavLink to="/" className="hover:text-[#282561] hover:font-bold transition-colors duration-200">Home</NavLink></li>
-              <li><NavLink to="/products" className="hover:text-[#282561] hover:font-bold transition-colors duration-200">Products</NavLink></li>
-              <li><NavLink to="/about" className="hover:text-[#282561] hover:font-bold transition-colors duration-200">About Us</NavLink></li>
-              <li> <NavLink to="/contact" className="hover:text-[#282561] hover:font-bold transition-colors duration-200">Contact</NavLink></li>
-              <li><NavLink to="/faq" className="hover:text-[#282561] hover:font-bold transition-colors duration-200">FAQ</NavLink></li>
-              <li><a href="#" className="hover:text-[#282561] hover:font-bold transition-colors duration-200">Terms & Conditions</a></li>
-              <li><a href="#" className="hover:text-[#282561] hover:font-bold transition-colors duration-200">Privacy Policy</a></li>
+              <li>
+                <NavLink
+                  to="/"
+                  className="hover:text-[#282561] hover:font-bold transition-colors duration-200"
+                >
+                  Home
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/products"
+                  className="hover:text-[#282561] hover:font-bold transition-colors duration-200"
+                >
+                  Products
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/about"
+                  className="hover:text-[#282561] hover:font-bold transition-colors duration-200"
+                >
+                  About Us
+                </NavLink>
+              </li>
+              <li>
+                {" "}
+                <NavLink
+                  to="/contact"
+                  className="hover:text-[#282561] hover:font-bold transition-colors duration-200"
+                >
+                  Contact
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/faq"
+                  className="hover:text-[#282561] hover:font-bold transition-colors duration-200"
+                >
+                  FAQ
+                </NavLink>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="hover:text-[#282561] hover:font-bold transition-colors duration-200"
+                >
+                  Terms & Conditions
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="hover:text-[#282561] hover:font-bold transition-colors duration-200"
+                >
+                  Privacy Policy
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -64,7 +135,7 @@ const Footer = () => {
 
               <li className="flex items-center justify-center md:justify-start">
                 <FiMail className="text-[#282561] mr-2 text-lg" />
-                info@enthoruchira.com
+                enthoruchirapickles@gmail.com
               </li>
 
               <li className="flex items-center justify-center md:justify-start">
@@ -114,7 +185,6 @@ const Footer = () => {
               </div>
             </div>
 
-
             {/* Follow Us On section */}
             <div className="mt-8">
               <h5 className="font-semibold text-lg mb-2">FOLLOW US ON</h5>
@@ -140,7 +210,10 @@ const Footer = () => {
 
         {/* Copyright Section */}
         <div className="text-center text-sm text-gray-500">
-          <p>© 2024 Entho Ruchira. All rights reserved. Made with ❤️ in Telangana.</p>
+          <p>
+            © 2024 Entho Ruchira. All rights reserved. Made with ❤️ in
+            Telangana.
+          </p>
         </div>
       </div>
     </footer>

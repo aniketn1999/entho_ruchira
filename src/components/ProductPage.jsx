@@ -81,7 +81,7 @@ const ProductPage = () => {
       <section className="py-15 bg-[#282561]">
         <div className="container mx-auto px-4">
           {/* Heading */}
-          <h2 className="text-3xl font-bold text-center text-white mb-4">
+          <h2 className="text-3xl font-bold text-center text-white mt-6 sm:mt-6 mb-4">
             Our Pickles Collection
           </h2>
           <p className="text-center text-[#fdc58a] mb-10 max-w-2xl mx-auto">
@@ -148,15 +148,18 @@ const ProductPage = () => {
 
                     <div className="p-4">
                       <div className="flex items-center justify-between text-gray-600 mb-2">
-                        <span className="text-sm">{product.price / 100} GMS</span>
+                        <span className="text-sm">
+                          {product.price / 100} GMS
+                        </span>
                         <div className="flex items-center">
                           {[...Array(5)].map((_, i) => (
                             <svg
                               key={i}
-                              className={`w-4 h-4 ${i < product.rating
-                                ? "text-[#fdc58a]"
-                                : "text-gray-300"
-                                }`}
+                              className={`w-4 h-4 ${
+                                i < product.rating
+                                  ? "text-[#fdc58a]"
+                                  : "text-gray-300"
+                              }`}
                               fill="currentColor"
                               viewBox="0 0 20 20"
                             >
@@ -173,16 +176,13 @@ const ProductPage = () => {
                         {product.name}
                       </h3>
                       <p className="text-sm text-gray-500 mt-1">
-                        {
-                          product.description.length > 80
-                            ? `${product.description.slice(0, 80)}...`
-                            : product.description
-                        }
+                        {product.description.length > 80
+                          ? `${product.description.slice(0, 80)}...`
+                          : product.description}
                       </p>
 
                       <div className="mt-4 flex items-center justify-between">
                         <div>
-
                           <span className="text-sm text-gray-400 ml-2">
                             ₹{product.oldPrice}
                           </span>
