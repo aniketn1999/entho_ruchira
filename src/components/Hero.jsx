@@ -3,9 +3,9 @@ import React, { useState, useEffect } from "react";
 const Hero = () => {
   const desktopImages = [
     "/assets/backgroundImg.png",
-    "/assets/backgroundImg1.png",
     "/assets/backgroundImg2.png",
     "/assets/backgroundImg3.png",
+    "/assets/backgroundImg4.png",
   ];
 
   const mobileImages = [
@@ -38,7 +38,7 @@ const Hero = () => {
       <img
         src={images[current]}
         alt="hero"
-        className="w-full object-cover
+        className="w-full object-fill
         h-[65vh] sm:h-[70vh] md:h-[85vh] lg:h-screen"
       />
 
