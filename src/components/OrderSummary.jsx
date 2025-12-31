@@ -11,7 +11,7 @@ const OrderSummary = ({ onPlaceOrder }) => {
     return sum + price * qty;
   }, 0);
 
-  const shipping =  50;
+  const shipping = 50;
   const total = subtotal + shipping;
 
   return (
@@ -54,7 +54,7 @@ const OrderSummary = ({ onPlaceOrder }) => {
       </div>
 
       <button
-        onClick={onPlaceOrder}
+        onClick={() => onPlaceOrder && onPlaceOrder()}
         className="mt-6 w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 rounded-lg transition cursor-pointer"
       >
         Place Order

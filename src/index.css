@@ -57,3 +57,13 @@ html, body {
 .animate-zoomIn {
   animation: zoomIn .3s ease-in-out;
 }
+
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+

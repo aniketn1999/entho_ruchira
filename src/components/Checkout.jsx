@@ -4,9 +4,13 @@ import OrderSummary from "../components/OrderSummary";
 import { useCart } from "../components/CartContext";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 const Checkout = () => {
   const { cartItems, clearCart } = useCart();
+  const navigate = useNavigate();
+
+  const SHIPPING_CHARGE = 50;
 
   const [address, setAddress] = useState({
     name: "",
@@ -17,25 +21,47 @@ const Checkout = () => {
     pincode: "",
   });
 
+  const validateAddress = () => {
+    for (let key in address) {
+      if (!address[key].trim()) {
+        toast.error(`Please fill ${key}`);
+        return false;
+      }
+    }
+    if (!/^[6-9]\d{9}$/.test(address.phone)) {
+      toast.error("Enter valid 10 digit mobile number");
+      return false;
+    }
+    if (!/^\d{6}$/.test(address.pincode)) {
+      toast.error("Enter valid 6 digit pincode");
+      return false;
+    }
+    return true;
+  };
+
   const handlePlaceOrder = async () => {
     if (!cartItems.length) {
-      toast.error("Cart is empty");
+      toast.error("Your cart is empty");
       return;
     }
 
-    // Convert cart items to readable text
+    if (!validateAddress()) return;
+
+    const subtotal = cartItems.reduce(
+      (sum, item) => sum + item.price * item.quantity,
+      0
+    );
+
+    const total = subtotal + SHIPPING_CHARGE;
+
     const orderItems = cartItems
       .map(
         (item) =>
-          `${item.name} (${item.selectedWeight}) x ${item.quantity} = ₹${
+          `${item.name} (${item.selectedWeight}) × ${item.quantity} = ₹${
             item.price * item.quantity
           }`
       )
       .join("\n");
-    const totalAmount = cartItems.reduce(
-      (sum, item) => sum + item.price * item.quantity,
-      0
-    );
 
     const templateParams = {
       customer_name: address.name,
@@ -46,7 +72,9 @@ ${address.city}, ${address.state}
 Pincode: ${address.pincode}
       `,
       order_items: orderItems,
-      total_amount: totalAmount,
+      subtotal_amount: subtotal,
+      shipping_amount: SHIPPING_CHARGE,
+      total_amount: total,
     };
 
     try {
@@ -59,8 +87,11 @@ Pincode: ${address.pincode}
 
       toast.success("Order placed successfully 🎉");
       clearCart();
-    } catch (error) {
-      console.error(error);
+
+      // ✅ Redirect to product page after 2 sec
+      setTimeout(() => navigate("/products"), 2000);
+    } catch (err) {
+      console.error(err);
       toast.error("Failed to place order");
     }
   };
@@ -72,12 +103,10 @@ Pincode: ${address.pincode}
       </h1>
 
       <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
-        {/* Address */}
-        <div className="md:col-span-2 space-y-6">
+        <div className="md:col-span-2">
           <AddressForm address={address} setAddress={setAddress} />
         </div>
 
-        {/* Order Summary */}
         <OrderSummary onPlaceOrder={handlePlaceOrder} />
       </div>
     </div>

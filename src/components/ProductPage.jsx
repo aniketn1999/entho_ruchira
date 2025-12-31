@@ -123,12 +123,12 @@ const ProductPage = () => {
             </aside>
 
             {/* Product Cards */}
-            <div className="md:col-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 p-20">
+            <div className="md:col-span-3 flex lg:grid lg:grid-cols-3 gap-6 overflow-x-auto lg:overflow-visible snap-x snap-mandatory px-4 md:p-20 scrollbar-hide">
               {filteredProducts.length ? (
                 filteredProducts.map((product) => (
                   <div
                     key={product.id}
-                    className="bg-white text-gray-800 rounded-xl shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105"
+                    className="min-w-[85%] sm:min-w-[60%] lg:min-w-0 snap-center bg-white text-gray-800 rounded-xl shadow-lg overflow-hidden transition-transform duration-300"
                   >
                     <NavLink to={`/products/${product.id}`}>
                       <div className="relative">
@@ -137,9 +137,7 @@ const ProductPage = () => {
                           alt={product.alt}
                           className="w-full h-auto object-cover"
                         />
-                        <span className="absolute top-4 right-4 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded-full">
-                          {product.discount}% off
-                        </span>
+
                         <span className="absolute top-4 left-4 bg-[#282561] text-white text-xs font-bold px-2 py-1 rounded-full">
                           {product.badge}
                         </span>
@@ -188,7 +186,7 @@ const ProductPage = () => {
                           </span>
                         </div>
                         <NavLink to={`/products/${product.id}`}>
-                          <button className="bg-[#fdc58a] text-[#282561] font-bold py-2 px-6 rounded-full transition-colors duration-300 hover:bg-[#ffdfb1] cursor:pointer">
+                          <button className="bg-[#fdc58a] text-[#282561] font-bold py-2 px-6 rounded-full transition-colors duration-300 hover:bg-[#ffdfb1] cursor-pointer">
                             BUY
                           </button>
                         </NavLink>
